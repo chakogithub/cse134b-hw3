@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects | Jiangrong Portfolio - UC San Diego">
+    <title>Projects | Jiangrong</title>
+    <link rel="icon" href="assets/favicon.ico">
+    <style>
+        table, td, th {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        console.log("projects.html loaded");
+    </script>
+</head>
+
+<body>
+<header>
+    <h1>Jiangrong Liu</h1>
+    <details open>
+        <summary>Links</summary>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="connect.html">Connect</a></li>
+            </ul>
+        </nav>
+    </details>
+</header>
+
+<main>
+    <section id="connect-board">
+        <h2>Message Board</h2>
+
+        <!-- Existing messages -->
+        <div class="message-list"> <!-- only a structural meaning -->
+        <article>
+            <header>
+                <h3>Prof Powell says:</h3>
+                <time datetime="2025-10-20T20:00">8:00 PM</time>
+            </header>
+            <p><em>Good Job!!!</em></p>
+        </article>
+
+        <article>
+            <header>
+                <h3>System Notice</h3>
+            </header>
+            <p><strong>Welcome!</strong> You can leave your message below.</p>
+        </article>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Contact form section -->
+    <section id="contact-form">
+        <h2>Say Something</h2>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Contact Me</legend>
+
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Your name"><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="example@abc.com"><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="40" placeholder="Type your message..."></textarea><br><br>
+
+                <button type="submit">Send</button>
+            </fieldset>
+        </form>
+
+        <!-- Dialog element for potential confirmation -->
+        <dialog id="sentDialog">
+            <p>Message sent successfully! (Simulation only)</p>
+            <button>Close</button>
+        </dialog>
+
+        <noscript>
+            <p><strong>Note:</strong> This form does not actually send data — JavaScript is disabled.</p>
+        </noscript>
+    </section>
+
+    <section id="contact-info">
+        <h3>Other Ways to Connect</h3>
+        <ul>
+            <li><a href="mailto:henry10372@outlook.com">Email Me</a></li>
+            <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+            <li><a href="https://github.com/">GitHub</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Jiangrong</p>
+    <p>Made with love in San Diego.</p>
+</footer>
+</body>
+</html>
