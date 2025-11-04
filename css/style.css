@@ -250,12 +250,13 @@ tr:hover {
 
 form {
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    padding: 2rem;
-    max-width: 700px;
-    margin-top: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+    padding: 1.2rem;
+    max-width: 500px;
+    margin: 1rem auto;
     border: 1px solid #ddd;
+    line-height: 0.8;
 }
 
 /* labels */
@@ -263,8 +264,9 @@ form label {
     display: block;
     font-weight: 600;
     color: var(--text-dark);
-    margin-top: 1rem;
-    margin-bottom: 0.4rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.85rem;
 }
 
 /* input fields */
@@ -272,13 +274,14 @@ form input[type="text"],
 form input[type="email"],
 form textarea {
     width: 100%;
-    padding: 0.75rem 1rem;
+    padding: 0.35rem 0.6rem;
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: 5px;
     font-family: var(--font-main);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     transition: border-color var(--transition-fast);
     box-sizing: border-box;
+    margin-bottom: 0.5rem;
 }
 
 form input:focus,
@@ -288,12 +291,11 @@ form textarea:focus {
     box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 50%, transparent);
 }
 
-/* textarea styling: full width, fixed size */
 form textarea {
-    resize: none; /* disables scaling */
-    min-height: 120px;
-    white-space: nowrap; /* no line wrapping */
-    overflow-x: auto; /* allows horizontal scroll if text is long */
+    resize: none;
+    min-height: 60px;
+    white-space: nowrap;
+    overflow-x: auto;
 }
 
 /* submit button */
@@ -302,17 +304,16 @@ form input[type="submit"] {
     color: white;
     font-weight: 600;
     border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: 6px;
-    margin-top: 1.2rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
     cursor: pointer;
     transition: background-color var(--transition-fast);
 }
 
 form input[type="submit"]:hover {
-    background-color: color-mix(in srgb, var(--accent) 85%, black);
+    background-color: color-mix(in srgb, var(--accent) 80%, black);
 }
-
 
 /* ====== SEND BUTTON ====== */
 
@@ -353,4 +354,21 @@ form button[type="submit"]:disabled {
     background-color: #ccc;
     cursor: not-allowed;
     box-shadow: none;
+}
+
+
+/* ====== TIME TAG STYLING ====== */
+
+time {
+    font-size: 0.85rem;                 /* slightly smaller than body text */
+    color: color-mix(in srgb, var(--text-dark) 60%, #888); /* muted gray tone */
+    font-style: italic;                 /* distinguish it visually */
+    letter-spacing: 0.3px;              /* adds slight modern polish */
+    margin-left: 0.25rem;               /* subtle offset from surrounding text */
+    vertical-align: middle;             /* aligns nicely beside text */
+    display: inline-block;
+    transition: color var(--transition-fast);
+}
+time:hover {
+    color: var(--accent);               /* highlight on hover */
 }

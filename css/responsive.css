@@ -1,0 +1,145 @@
+/*
+   General breakpoints:
+   - Desktop: ≥ 1024px  (default in style.css)
+   - Tablet:  600–1023px
+   - Mobile:  ≤ 599px
+*/
+
+/* Tablet layout adjustments */
+@media (max-width: 1024px) {
+    #sidebar {
+        width: 25%;
+        min-width: 180px;
+        padding: 1rem;
+    }
+
+    .main-content {
+        margin-left: 25%;
+        width: calc(100% - 25%);
+        padding: 2rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
+
+/* ================================
+   MOBILE LAYOUT (≤ 768px)
+   ================================ */
+
+@media (max-width: 768px) {
+
+    /* Hide sidebar by default */
+    #sidebar {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100dvh;
+        width: 70%;
+        max-width: 260px;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 2rem 1.5rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* Show sidebar when toggled */
+    #menu-toggle:checked + #sidebar {
+        left: 0;
+    }
+
+    /* Hamburger button */
+    .hamburger {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1100;
+        cursor: pointer;
+        width: 30px;
+        height: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: var(--accent);
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+
+    /* Animate hamburger into X when active */
+    #menu-toggle:checked + #sidebar + .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    #menu-toggle:checked + #sidebar + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked + #sidebar + .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Push main content down */
+    .main-content {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+
+    /* Form, table, and media adjustments */
+    form,
+    table,
+    .media-frame {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    th, td {
+        font-size: 0.85rem;
+        padding: 0.4rem;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+}
+
+/* ================================
+   SMALL MOBILE LAYOUT (≤ 480px)
+   ================================ */
+@media (max-width: 480px) {
+    .main-content {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    h1, h2, h3 {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        padding-left: 0;
+    }
+
+    .hamburger {
+        width: 25px;
+        height: 18px;
+    }
+
+    .hamburger span {
+        height: 3px;
+    }
+}
