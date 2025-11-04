@@ -6,34 +6,32 @@
     <meta name="description" content="Projects | Jiangrong Portfolio - UC San Diego">
     <title>Projects | Jiangrong</title>
     <link rel="icon" href="assets/favicon.ico">
-    <style>
-        table, td, th {
-            border: 1px solid black;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script>
         console.log("projects.html loaded");
     </script>
 </head>
 
-<body>
-<header>
-    <h1>Jiangrong Liu</h1>
+<body class="page">
+<header id="sidebar">
+    <h1 class="site-title">Jiangrong Liu</h1>
+    <h2 class="site-subtitle">UC San Diego | Projects</h2>
     <details open>
         <summary>Links</summary>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experiments.html">Experiments</a></li>
-                <li><a href="connect.html">Connect</a></li>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link active" href="projects.html">Projects</a></li>
+                <li><a class="nav-link" href="experiments.html">Experiments</a></li>
+                <li><a class="nav-link" href="connect.html">Connect</a></li>
             </ul>
         </nav>
     </details>
 </header>
 
-<main>
-    <section id="intro">
+<main class="main-content">
+    <section id="intro" class="content-section">
         <h2>My Projects</h2>
         <p>
             Below are a few highlighted projects that reflect my learning journey and interests at
@@ -42,58 +40,53 @@
         </p>
     </section>
 
-    <article>
-        <header>
-            <h3>SurfStore – Distributed File System</h3>
-        </header>
-        <p>
-            Implemented a <em>distributed file storage system</em> using <b>gRPC</b> and <b>Raft consensus</b> in Go.
-            Designed replication and fault-tolerance mechanisms to ensure data consistency across servers.
-        </p>
-        <ul>
-            <li>Language: Go</li>
-            <li>Key Concepts: Replication, Leader Election, Fault Tolerance</li>
-        </ul>
+    <section id="projects-list" class="content-section">
+        <article class="project-card">
+            <header>
+                <h3>SurfStore – Distributed File System</h3>
+            </header>
+            <p>
+                Implemented a <em>distributed file storage system</em> using <b>gRPC</b> and <b>Raft consensus</b> in Go.
+                Designed replication and fault-tolerance mechanisms to ensure data consistency across servers.
+            </p>
+            <ul>
+                <li>Language: Go</li>
+                <li>Key Concepts: Replication, Leader Election, Fault Tolerance</li>
+            </ul>
+        </article>
+
         <hr>
-    </article>
 
-    <article>
-        <header>
-            <h3>TrendTube: analysis & predictions on trending YouTube videos</h3>
-        </header>
-        <p>
+        <article class="project-card">
+            <header>
+                <h3>TrendTube: Analysis & Predictions on YouTube Trends</h3>
+            </header>
+            <ol>
+                <li>Built data pipelines for 39K+ videos; trained and evaluated <b>Random Forest</b> and <b>XGBoost</b> models.</li>
+                <li>Achieved <b>0.83 precision</b> across 33 categories for engagement prediction.</li>
+                <li>Applied <b>Jaccard similarity</b> and <b>Girvan-Newman algorithm</b> for content clustering.</li>
+            </ol>
+            <p>
+                <a href="https://github.com/Dramalf/ucsd-cse258-final-project" target="_blank">Project Repository</a>
+            </p>
+        </article>
 
-        </p>
-        <ol>
-            <li>Built data pipelines to preprocess 39K+ videos, trained and evaluated <b>Random Forest</b>
-                and <b>XGBoost</b> models. </li>
-            <li>Achieved <b>0.83 precision</b> across 33 categories for category and engagement prediction.</li>
-            <li>Applied content-based recommendation with <b>Jaccard similarity</b> and implemented Girvan-Newman algorithm
-                for clustering.</li>
-        </ol>
-        <p>
-            <a href="https://github.com/Dramalf/ucsd-cse258-final-project">
-                Project Repository</a>
-        </p>
         <hr>
-    </article>
 
-    <!-- Example Project 3 -->
-    <article>
-        <header>
-            <h3>Web Portfolio</h3>
-        </header>
-        <p>
-            This very site demonstrates <b>semantic HTML</b> only for now.
-        </p>
-        <p>
-            More to come...
-        </p>
-        <progress value="70" max="100"></progress> Completion in Progress
-    </article>
+        <article class="project-card">
+            <header>
+                <h3>Web Portfolio</h3>
+            </header>
+            <p>
+                This very site demonstrates <b>semantic HTML</b> and will soon evolve with Flexbox, Grid, and responsive CSS.
+            </p>
+            <progress class="progress-bar" value="70" max="100"></progress>
+            <span>Completion in Progress</span>
+        </article>
+    </section>
 </main>
 
-<footer>
+<footer id="site-footer">
     <p>&copy; 2025 Jiangrong</p>
     <p>Made with love in San Diego.</p>
 </footer>

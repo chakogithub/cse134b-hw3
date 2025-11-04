@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio of Jiangrong - UC San Diego">
+    <meta name="description" content="Personal portfolio of Jiangrong Liu - UC San Diego">
     <title>Home | Jiangrong</title>
     <link rel="icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <style>
         table, td, th {
             border: 1px solid black;
         }
     </style>
     <script>
-        <!-- Placeholder -->
+        // Placeholder for analytics
         console.log("index.html loaded");
     </script>
 </head>
 
-<body>
-<header>
-    <h1>Jiangrong Liu</h1>
+<body class="page">
+<header id="sidebar">
+    <h1 class="site-title">Jiangrong Liu</h1>
+    <h2 class="site-subtitle">UC San Diego | Portfolio</h2>
 
+    <!-- Optional profile image -->
     <!--
-    <figure>
+    <figure class="profile-block">
         <picture>
             <img src="assets/images/profile.jpg" alt="Profile photo" width="150" height="150">
         </picture>
@@ -30,36 +34,36 @@
     </figure>
     -->
 
-    <!-- Vertical navigation sidebar -->
+    <!-- Sidebar navigation -->
     <details open>
         <summary>Links</summary>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="experiments.html">Experiments</a></li>
-                    <li><a href="connect.html">Connect</a></li>
-                </ul>
-            </nav>
-        </details>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="projects.html">Projects</a></li>
+                <li><a class="nav-link" href="experiments.html">Experiments</a></li>
+                <li><a class="nav-link" href="connect.html">Connect</a></li>
+            </ul>
+        </nav>
+    </details>
 </header>
 
-<main>
-    <section id="bio">
+<main class="main-content">
+    <section id="bio-section" class="content-section">
         <h2>Bio</h2>
         <article>
             <p>
                 Nice to meet you! This is <strong>Jiangrong Liu</strong>, a student at <i>UC San Diego</i>
-                pursuing Master's Degree in computer engineering. I am interested in
-                <b>backend development</b>, and am just beginning my journey into <b>frontend programming</b>.
+                pursuing a Master's Degree in Computer Engineering. I am interested in
+                <b>backend development</b> and am beginning my journey into <b>frontend programming</b>.
             </p>
             <p><i>Click on the links in the sidebar to explore more.</i></p>
         </article>
     </section>
 
-    <section id="courses">
+    <section id="courses-section" class="content-section">
         <h2>Courses Taken</h2>
-        <table>
+        <table class="course-table">
             <caption>Selected UCSD Courses</caption>
             <colgroup>
                 <col span="1">
@@ -98,27 +102,25 @@
         </table>
     </section>
 
-
-    <section id="moreaboutme">
-        <h2>More About me</h2>
-        Besides <del>classes</del>, You may also know me as...
+    <section id="more-section" class="content-section">
+        <h2>More About Me</h2>
+        <p>Besides <del>classes</del>, you may also know me as...</p>
         <ol>
             <li>Hobbies: a great fan of musicals!</li>
             <li>
                 My Dream: dreaming about keeping a golden retriever
-                <img src="./assets/golden.ico" alt="Golden retriever icon" width="20" height="20"> in the future!
+                <img src="./assets/golden.ico" alt="Golden retriever icon" width="20" height="20">
+                in the future!
             </li>
-            <li>fill more details later...</li>
+            <li>...more details later.</li>
         </ol>
-
     </section>
-
 </main>
 
-<footer>
+<footer id="site-footer">
     <p>&copy; 2025 Jiangrong</p>
     <p>Made with love in San Diego.</p>
-    <!-- <noscript>Your browser does not support JavaScript or it is disabled.</noscript> -->
+    <p>@ Jiangrong</p>
 </footer>
 </body>
 </html>
