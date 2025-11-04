@@ -1,0 +1,114 @@
+/* ====== GLOBAL VARIABLES AND BASE STYLES ====== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #2e3a59;
+    --accent-color: #4f86f7;
+    --bg-color: #fdfdfd;
+    --text-color: #222;
+    --highlight-color: color-mix(in srgb, var(--accent-color) 50%, white);
+    --font-main: "Poppins", "Segoe UI", sans-serif;
+    --font-alt: "Roboto Slab", serif;
+    --transition-fast: 0.25s ease-in-out;
+}
+
+body.page {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    min-height: 100dvh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+}
+
+/* ====== SIDEBAR STRUCTURE ====== */
+#sidebar {
+    background-color: var(--primary-color);
+    color: white;
+    width: 22%;
+    min-width: 220px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;          /* stays still when scrolling */
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.sidebar-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.sidebar-bottom {
+    margin-top: auto;          /* pushes this section to the bottom */
+}
+
+/* ====== SIDEBAR HEADER ====== */
+.site-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: var(--highlight-color);
+}
+
+.site-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.main-nav {
+    margin-top: auto;
+}
+
+/* ====== PROFILE BLOCK (IF PRESENT) ====== */
+.profile-block img {
+    width: 100%;
+    max-width: 160px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+/* ====== NAVIGATION ====== */
+.main-nav {
+    flex-grow: 1;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.nav-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.4em 0;
+    font-size: 1rem;
+    transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.nav-link:hover {
+    color: var(--highlight-color);
+    transform: translateX(4px);
+}
+
+.nav-link.active {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* ====== FOOTER IN SIDEBAR (IF ANY) ====== */
+#sidebar footer {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: auto;
+    opacity: 0.8;
+}
