@@ -1,10 +1,9 @@
-/* ====== GLOBAL VARIABLES AND BASE STYLES ====== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab:wght@400;600&display=swap');
 
 :root {
     --primary-color: #2e3a59;
     --accent-color: #4f86f7;
-    --bg-color: #fdfdfd;
+    --bg-color: rgb(200, 232, 207);
     --text-color: #222;
     --highlight-color: color-mix(in srgb, var(--accent-color) 50%, white);
     --font-main: "Poppins", "Segoe UI", sans-serif;
@@ -24,28 +23,28 @@ body.page {
 
 /* ====== SIDEBAR STRUCTURE ====== */
 #sidebar {
-    background-color: var(--primary-color);
-    color: white;
-    width: 22%;
-    min-width: 220px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: fixed;          /* stays still when scrolling */
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
+    width: 20%;
+    min-width: 220px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar-top {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.3rem;
+    margin-bottom: auto;      /* pushes rest downward */
 }
 
 .sidebar-bottom {
-    margin-top: auto;          /* pushes this section to the bottom */
+    margin-top: auto;         /* sticks bottom section down */
 }
 
 /* ====== SIDEBAR HEADER ====== */
@@ -64,6 +63,13 @@ body.page {
 
 .main-nav {
     margin-top: auto;
+}
+
+.main-content {
+    margin-left: 22%;          /* equal to sidebar width */
+    padding: 2rem;
+    flex: 1;
+    background-color: var(--bg-color);
 }
 
 /* ====== PROFILE BLOCK (IF PRESENT) ====== */
@@ -105,10 +111,3 @@ body.page {
     font-weight: bold;
 }
 
-/* ====== FOOTER IN SIDEBAR (IF ANY) ====== */
-#sidebar footer {
-    font-size: 0.9rem;
-    text-align: center;
-    margin-top: auto;
-    opacity: 0.8;
-}
